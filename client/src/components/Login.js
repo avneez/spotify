@@ -7,14 +7,17 @@ const REDIRECT_URI = 'http://localhost:3000'
 
 const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&responde_type=code&redirect_uri=${REDIRECT_URI}&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state&response_type=token&show_dialog=true`
 
-export default function Login(){
+export default function Login({code, logout}){
+
+
 
     return (
       <Container>
         <img src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png' alt='spotify' />
-      <LoginButton>
+
+      {!code ? <LoginButton>
         <LoginLink href={AUTH_URL}>Login with Spotify</LoginLink>
-      </LoginButton>
+      </LoginButton> : <LoginButton onClick={logout}>Logout</LoginButton>}
       </Container>
     )
   }

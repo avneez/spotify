@@ -36,7 +36,7 @@ app.post('/login', (req, res) => {
 })
 
 
-app.post("/refresh", (req, res) => {
+app.get("/refresh", (req, res) => {
     const refreshToken = req.body.refreshToken
 
     const spotifyApi = new SpotifyWebApi({

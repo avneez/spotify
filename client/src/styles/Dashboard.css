@@ -1,0 +1,17 @@
+.container{
+    display:flex;
+    height: 100vh;
+    flex-direction:column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items:center;
+    overflow: auto;
+    color:white;
+    background-color: #353835;
+}
+
+.songs{
+    flex-grow: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

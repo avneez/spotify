@@ -15,13 +15,17 @@ function App() {
 
     if(hash){
       const token = hash.substring(1).split('&')[0].split('=')[1];
+      window.location.hash = ''
       setCode(token)
-      console.log(token)
+      // console.log(token)
       localStorage.setItem('accessToken', token)
     }
   }, [])
 
-
+  const logout = () => {
+    setCode('')
+    localStorage.removeItem("accessToken")
+}
   // const code= new URLSearchParams(window.location.search).get('access_token')
   // console.log(code)
 
@@ -30,10 +34,11 @@ function App() {
 // },[])
 
   return (
-    code ? <Dashboard code={code}/> : <Login/>
-    // <>
-    // <Login/>
-    // </>
+    <div className='App'>
+      <header className='App-header'>
+    {code ? <Dashboard code={code}/> : <Login logout={logout}/>}
+    </header>
+    </div>
   )
 }
 

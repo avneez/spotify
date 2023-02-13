@@ -1,0 +1,19 @@
+.trackResultContainer{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    cursor: pointer;
+    background-color: rgb(19, 139, 49);
+}
+
+.trackResultContainer img{
+    height:64px;
+    width:64px;
+}
+
+.title{
+    margin-left: 2rem;
+    font-size: large;
+    color:#ffffff;
+    font-weight: 2rem;
+}
