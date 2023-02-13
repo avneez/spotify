@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const Buffer = require('buffer')
+// const Buffer = require('buffer')
 const SpotifyWebApi = require('spotify-web-api-node')
 // import lyricsFinder from 'lyrics-finder'
 

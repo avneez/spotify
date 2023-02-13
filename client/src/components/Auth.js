@@ -13,8 +13,10 @@ export default function Auth(code) {
       setAccessToken(res.data.accessToken)
       setRefreshToken(res.data.refreshToken)
       setExpiresIn(res.data.expiresIn)
+      // localStorage.setItem('accessToken',res.data.accessToken)
       window.history.pushState({}, null, '/')
     }).catch(() => {
+      console.log('error')
       window.location = '/'
     })
   }, [code])
