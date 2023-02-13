@@ -1,7 +1,7 @@
 import { Container, LoginButton, LoginLink } from "../styles/Login.styles"
 
 const CLIENT_ID = '810804b9e3484f579fffb7b40fa27322'
-const CLIENT_SECRET = '0d668aec76b147fab09aa0e22626c798'
+// const CLIENT_SECRET = '0d668aec76b147fab09aa0e22626c798'
 
 const REDIRECT_URI = 'http://localhost:3000'
 
